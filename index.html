@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bebas: "'Bebas Neue', cursive",
+            },
+            colors: {
+              clifford: "#da373d",
+              pgPr: "#FABE4C",
+              pgbtn: "#A4BC46",
+              pgtitle: "#363958",
+              pgsub: "#3E3E3E",
+              pgbg2: "#E5E5E5",
+              pgbg1: "#FFFBF0",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <section id="home" class="bg-pgbg1 md:py-32 flex items-center">
+        <div
+          class="container mx-auto px-4 md:px-0 md:flex md:items-center justify-evenly"
+        >
+          <div class="homeleft">
+            <h1
+              class="font-bebas text-pgtitle text-4xl md:text-7xl drop-shadow-md"
+            >
+              <span class="text-pgPr">Be the Penguins<br /></span> of Winter
+            </h1>
+            <p class="text-sm md:text-base font-sans text-pgsub pb-5 pt-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <button>
+              <a
+                href="#"
+                class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md"
+                ><span class="pr-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 inline"
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    /></svg></span
+                >Buy Now</a
+              >
+            </button>
+          </div>
+          <div class="homeright">
+            <img src="images/model.png" class="w-1/2 md:w-full" alt="model" />
+          </div>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>
