@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- google fonts link  -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               bebas: "'Bebas Neue', cursive",
+              roboto: "'Roboto', sans-serif",
             },
             colors: {
               clifford: "#da373d",
@@ -25,34 +28,46 @@
               pgbtn: "#A4BC46",
               pgtitle: "#363958",
               pgsub: "#3E3E3E",
-              pgbg2: "#E5E5E5",
+              pgbg2: "#f1f1f1",
               pgbg1: "#FFFBF0",
+            },
+            boxShadow: {
+              pgprsh: "0px 10px 30px rgba(0, 0, 0, 0.05)",
             },
           },
         },
       };
     </script>
   </head>
-  <body>
+  <body class="font-roboto">
     <header>
-      <section id="home" class="bg-pgbg1 md:py-32 flex items-center">
+      <section id="home" class="bg-pgbg1 py-8 md:py-32 flex items-center">
         <div
-          class="container mx-auto px-4 md:px-0 md:flex md:items-center justify-evenly"
+          class="container mx-auto px-4 md:px-0 md:flex md:items-center md:flex-row-reverse justify-evenly"
         >
+          <div class="homeright">
+            <img
+              src="images/model.png"
+              class="w-1/2 md:w-full pb-3 md:pb-0"
+              alt="model"
+            />
+          </div>
           <div class="homeleft">
             <h1
-              class="font-bebas text-pgtitle text-4xl md:text-7xl drop-shadow-md"
+              class="font-bebas text-pgtitle text-5xl md:text-8xl drop-shadow-md"
             >
               <span class="text-pgPr">Be the Penguins<br /></span> of Winter
             </h1>
-            <p class="text-sm md:text-base font-sans text-pgsub pb-5 pt-3">
+            <p
+              class="text-sm md:text-base lg:text-xl font-sans text-pgsub pb-5 pt-3"
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
             <button>
               <a
                 href="#"
-                class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md"
+                class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
                 ><span class="pr-1"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,11 +82,144 @@
               >
             </button>
           </div>
-          <div class="homeright">
-            <img src="images/model.png" class="w-1/2 md:w-full" alt="model" />
-          </div>
         </div>
       </section>
     </header>
+    <main>
+      <section id="product" class="py-8 md:py-14">
+        <div class="container mx-auto px-4 md:px-0">
+          <div class="woman">
+            <h1 class="font-bebas text-3xl md:text-5xl text-penguintitle pb-5">
+              Woman Jacket
+            </h1>
+            <div
+              class="w-jackets grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-11"
+            >
+              <div
+                class="jacket1 bg-white shadow-pgprsh p-4 xl:p-6 rounded-2xl"
+              >
+                <div class="jimg p-7 bg-pgbg2 rounded-lg">
+                  <img src="images/jacket-1.png" alt="" class="w-3/5 mx-auto" />
+                </div>
+                <div class="jabout py-5">
+                  <h2 class="text-2xl font-bold text-pgtitle pb-3">
+                    Yellow Coat Jacket
+                  </h2>
+                  <p class="text-base text-pgsub">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, consequatur!
+                  </p>
+                </div>
+                <div class="jbuy flex justify-between items-center">
+                  <div class="jprice">
+                    <h3 class="text-2xl md:text-4xl font-black text-pgPr">
+                      $234
+                    </h3>
+                  </div>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                class="jacket2 bg-white shadow-pgprsh p-4 xl:p-6 rounded-2xl"
+              >
+                <div class="jimg p-7 bg-pgbg2 rounded-lg">
+                  <img src="images/jacket-2.png" alt="" class="w-3/5 mx-auto" />
+                </div>
+                <div class="jabout py-5">
+                  <h2 class="text-2xl font-bold text-pgtitle pb-3">
+                    Yellow Coat Jacket
+                  </h2>
+                  <p class="text-base text-pgsub">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, consequatur!
+                  </p>
+                </div>
+                <div class="jbuy flex justify-between items-center">
+                  <div class="jprice">
+                    <h3 class="text-2xl md:text-4xl font-black text-pgPr">
+                      $234
+                    </h3>
+                  </div>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                class="jacket3 bg-white shadow-pgprsh p-4 xl:p-6 rounded-2xl"
+              >
+                <div class="jimg p-7 bg-pgbg2 rounded-lg">
+                  <img src="images/jacket-3.png" alt="" class="w-3/5 mx-auto" />
+                </div>
+                <div class="jabout py-5">
+                  <h2 class="text-2xl font-bold text-pgtitle pb-3">
+                    Yellow Coat Jacket
+                  </h2>
+                  <p class="text-base text-pgsub">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, consequatur!
+                  </p>
+                </div>
+                <div class="jbuy flex justify-between items-center">
+                  <div class="jprice">
+                    <h3 class="text-2xl md:text-4xl font-black text-pgPr">
+                      $234
+                    </h3>
+                  </div>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="man"></div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
